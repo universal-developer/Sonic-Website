@@ -147,3 +147,127 @@ body {
 .font-sf-bold {
   font-weight: 700;
 }
+
+/* Typography System - Hierarchy Based */
+
+/* Headings */
+.title-primary {
+  /* For main page headlines - "Engrossing Audio, Streamlined" */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1c1c1e;
+}
+
+.title-secondary {
+  /* For section headlines - "Our latest innovation", "Trusted by Thousands" */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1c1c1e;
+}
+
+.title-tertiary {
+  /* For feature headlines - "Experience crystal-clear audio with deep bass" */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1c1c1e;
+}
+
+.title-quaternary {
+  /* For subsection headlines - "Timeless Elegance", "Sound Insights" */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1c1c1e;
+}
+
+.title-quinary {
+  /* For card titles, FAQ questions */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1c1c1e;
+}
+
+/* Body text */
+.text-primary {
+  /* Main descriptive text - larger paragraphs */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #6e6e73;
+}
+
+.text-secondary {
+  /* Standard body text */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #6e6e73;
+}
+
+.text-highlight {
+  /* For emphasized text, feature highlights */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 24px;
+  line-height: 1.6;
+  font-weight: 500; /* Medium weight for emphasis */
+  color: #1c1c1e;
+}
+
+.text-caption {
+  /* For smaller supporting text, captions, tags */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #86868b;
+}
+
+/* Stats text - for the numbers in the stats section */
+.text-stat {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1c1c1e;
+}
+
+/* Modifiers you can combine with the above */
+.text-center {
+  text-align: center;
+}
+
+.text-dark {
+  color: #1c1c1e;
+}
+
+.text-light {
+  color: #f5f5f7;
+}
+
+.text-accent {
+  color: #0071e3; /* Apple-style blue accent color, adjust to match your brand */
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}

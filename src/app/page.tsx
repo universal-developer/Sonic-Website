@@ -1,5 +1,11 @@
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/layout/NavBar";
+import Hero from "@/components/sections/Hero";
 
 export default function Home() {
-  return <NavBar />;
+  return (
+    <>
+      <NavBar />
+      <Hero />
+    </>
+  );
 }
