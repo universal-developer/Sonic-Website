@@ -12,9 +12,10 @@ export default {
       },
       colors: {
         sonic: {
-          green: "#4ade80", // Adjust this to match the green accent color in your design
+          green: "#4ade80",
           dark: "#171717",
           light: "#ffffff",
+          gray: "#FAFAFA", // Your gray background color
         },
       },
     },
