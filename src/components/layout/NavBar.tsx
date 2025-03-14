@@ -60,7 +60,7 @@ export default function NavBar() {
     },
     visible: {
       opacity: 1,
-      height: "100vh", // Changed from "auto" to "100vh" for full-screen
+      height: "100vh",
       transition: {
         duration: 0.3,
         ease: "easeInOut",
@@ -71,17 +71,25 @@ export default function NavBar() {
     },
   };
 
-  // Animation variants for menu items
+  // Updated animation variants for menu items to expand from center
   const itemVariants = {
     hidden: {
       opacity: 0,
-      y: 20,
-      transition: { duration: 0.2, ease: "easeInOut" },
+      scaleX: 0, // Start with no width
+      originX: 0.5, // Set origin to center
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut",
+      },
     },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.2, ease: "easeInOut" },
+      scaleX: 1, // Expand to full width
+      originX: 0.5, // Keep origin at center
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut",
+      },
     },
   };
 
@@ -107,28 +115,44 @@ export default function NavBar() {
               className="text-gray-600 hover:text-gray-900 relative group"
             >
               About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+              <span
+                className="absolute -bottom-1 left-1/2 right-1/2 w-0 h-[0.5] bg-gray-900 
+      transition-all duration-300 
+      group-hover:left-0 group-hover:right-0 group-hover:w-full"
+              ></span>
             </Link>
             <Link
               href="/features"
               className="text-gray-600 hover:text-gray-900 relative group"
             >
               Features
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+              <span
+                className="absolute -bottom-1 left-1/2 right-1/2 w-0 h-[0.5] bg-gray-900 
+      transition-all duration-300 
+      group-hover:left-0 group-hover:right-0 group-hover:w-full"
+              ></span>
             </Link>
             <Link
               href="/products"
               className="text-gray-600 hover:text-gray-900 relative group"
             >
               Products
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+              <span
+                className="absolute -bottom-1 left-1/2 right-1/2 w-0 h-[0.5] bg-gray-900 
+      transition-all duration-300 
+      group-hover:left-0 group-hover:right-0 group-hover:w-full"
+              ></span>
             </Link>
             <Link
               href="/contact"
               className="text-gray-600 hover:text-gray-900 relative group"
             >
               Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+              <span
+                className="absolute -bottom-1 left-1/2 right-1/2ß w-0 h-[0.5] bg-gray-900 
+      transition-all duration-300 
+      group-hover:left-0 group-hover:right-0 group-hover:w-full"
+              ></span>
             </Link>
           </div>
 
@@ -207,7 +231,10 @@ export default function NavBar() {
             variants={menuVariants}
           >
             <div className="flex flex-col items-center justify-center h-full pb-20 px-4 space-y-8">
-              <motion.div variants={itemVariants}>
+              <motion.div
+                variants={itemVariants}
+                className="w-full flex justify-center"
+              >
                 <Link
                   href="/about"
                   className="text-gray-700 hover:text-gray-900 block px-3 py-3 text-2xl font-medium relative group text-center"
@@ -218,7 +245,10 @@ export default function NavBar() {
                 </Link>
               </motion.div>
 
-              <motion.div variants={itemVariants}>
+              <motion.div
+                variants={itemVariants}
+                className="w-full flex justify-center"
+              >
                 <Link
                   href="/features"
                   className="text-gray-700 hover:text-gray-900 block px-3 py-3 text-2xl font-medium relative group text-center"
@@ -229,7 +259,10 @@ export default function NavBar() {
                 </Link>
               </motion.div>
 
-              <motion.div variants={itemVariants}>
+              <motion.div
+                variants={itemVariants}
+                className="w-full flex justify-center"
+              >
                 <Link
                   href="/products"
                   className="text-gray-700 hover:text-gray-900 block px-3 py-3 text-2xl font-medium relative group text-center"
@@ -240,7 +273,10 @@ export default function NavBar() {
                 </Link>
               </motion.div>
 
-              <motion.div variants={itemVariants}>
+              <motion.div
+                variants={itemVariants}
+                className="w-full flex justify-center"
+              >
                 <Link
                   href="/contact"
                   className="text-gray-700 hover:text-gray-900 block px-3 py-3 text-2xl font-medium relative group text-center"

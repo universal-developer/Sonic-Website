@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function Hero() {
+export default function HeroSection() {
   // Add overflow-hidden to body when component mounts
   useEffect(() => {
     document.body.style.overflowX = "hidden";
