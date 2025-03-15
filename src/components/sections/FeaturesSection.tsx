@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 export default function ProductFeatureSection() {
   return (
     <section className="flex flex-col items-center justify-start min-h-screen pt-32 px-4 overflow-hidden gap-30">
+      {/* First section. Image to the right, image to the left  */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
         {/* Image Container - First on Mobile */}
         <Image
@@ -42,7 +43,7 @@ export default function ProductFeatureSection() {
               The Perfect Sound, Anywhere
             </span>
           </div>
-          <h2 className="title-tertiary text-3xl md:text-4xl">
+          <h2 className="text-3xl md:text-4xl">
             Experience crystal-clear audio with deep bass and immersive sound.
           </h2>
           <p className="text-primary text-base md:text-lg">
@@ -73,10 +74,12 @@ export default function ProductFeatureSection() {
           </Button>
         </div>
       </div>
+
+      {/* Second section. Image to the left, image to the right  */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
         {/* Image Container - First on Mobile */}
         <Image
-          src="/Product-image-2.png"
+          src="/Product-Image-3.png"
           alt="Portable speaker"
           width={800}
           height={800}
@@ -106,15 +109,16 @@ export default function ProductFeatureSection() {
               <path d="M22 10v3" />
             </svg>
             <span className="text-highlight text-base md:text-lg">
-              The Perfect Sound, Anywhere
+              Smart. Sleek. Powerful.
             </span>
           </div>
-          <h2 className="title-tertiary text-3xl md:text-4xl">
-            Experience crystal-clear audio with deep bass and immersive sound.
+          <h2 className="text-3xl md:text-3xl">
+            Seamless connectivity, voice control, and a sleek, modern design
+            make this speaker the perfect addition to any room.
           </h2>
           <p className="text-primary text-base md:text-lg">
-            Our smart speaker is designed to fill your space with rich,
-            high-fidelity sound—whether youre at home or on the go.
+            Designed for modern living, this speaker blends premium sound with
+            intuitive controls.
           </p>
           <Button
             href="/buy"
