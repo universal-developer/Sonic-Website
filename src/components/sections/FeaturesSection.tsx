@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 export default function ProductFeatureSection() {
   return (
-    <section className="flex flex-col items-center justify-start min-h-screen pt-32 px-4 overflow-hidden gap-30">
+    <section className="flex flex-col items-center justify-start pt-32 pb-32 px-4 overflow-hidden gap-12">
       {/* First section. Image to the right, image to the left  */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
         {/* Image Container - First on Mobile */}
