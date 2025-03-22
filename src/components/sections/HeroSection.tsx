@@ -14,7 +14,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-start min-h-screen pt-32 px-4 overflow-hidden">
+    <section className="flex flex-col items-center justify-start max-h-screen pt-32 px-4 overflow-hidden">
       <motion.div
         className="max-w-2xl mx-auto flex flex-col items-center text-center"
         initial={{ opacity: 0, y: 20 }}
