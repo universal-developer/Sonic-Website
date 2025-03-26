@@ -6,7 +6,7 @@ import { StatCard } from "../ui/StatCards";
 
 export default function StatsSection() {
   return (
-    <section className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-16">
+    <section className="max-w-7xl mx-auto py-20 px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div>
           <motion.div
