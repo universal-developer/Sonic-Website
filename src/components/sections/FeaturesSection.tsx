@@ -7,7 +7,7 @@ export default function ProductFeatureSection() {
   return (
     <section className="flex flex-col items-center justify-start pt-32 pb-32 px-4 overflow-hidden gap-12">
       {/* First section. Image to the right, image to the left  */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1440px] mx-auto">
         {/* Image Container - First on Mobile */}
         <Image
           src="/Product-image-2.png"
@@ -76,7 +76,7 @@ export default function ProductFeatureSection() {
       </div>
 
       {/* Second section. Image to the left, image to the right  */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1440px] mx-auto">
         {/* Image Container - First on Mobile */}
         <Image
           src="/Product-Image-3.png"

@@ -19,7 +19,7 @@ export default function ProductShowSection() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto py-20 px-4">
+    <section className="max-w-[1440px] mx-auto py-20 px-4">
       {/* TEXT SECTION */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
         <div>
@@ -71,7 +71,7 @@ export default function ProductShowSection() {
         </div>
       </div>
 
-      <div className="relative w-full max-w-7xl mx-auto rounded-2xl shadow-xl overflow-hidden">
+      <div className="relative w-full max-w-[1440px] mx-auto rounded-2xl shadow-xl overflow-hidden">
         {/* AnimatePresence for exit/enter transitions */}
         <AnimatePresence mode="wait">
           <motion.img

@@ -1,4 +1,5 @@
 import NavBar from "@/components/layout/NavBar";
+import FAQSection from "@/components/sections/FAQSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import HeroSection from "@/components/sections/HeroSection";
 import ProductDescriptionSection from "@/components/sections/ProductDescriptionSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <FeaturesSection />
       <StatsSection />
       <ProductShowSection />
+      <FAQSection />
     </>
   );
 }
