@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 export default function FAQSection() {
   return (
-    <section className="grid items-center justify-center grid-cols-2 gap-4 max-w-[1470px] pt-32 px-4 overflow-hidden mx-auto">
+    <section className="grid items-start grid-cols-1 max-w-[1200px] pt-32 px-4 overflow-hidden mx-auto md:grid-cols-2 gap-20">
       <div className="flex flex-col gap-4">
         <div>
           <motion.h3
@@ -38,32 +38,65 @@ export default function FAQSection() {
         </div>
       </div>
 
-      <div>
+      <div className="space-y-8">
         <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
+          <AccordionItem value="item-1" className="pb-6 mb-8">
             <AccordionTrigger>
               <p className="text-2xl">What makes your speakers stand out?</p>
             </AccordionTrigger>
             <AccordionContent>
-              <p>
+              <p className="">
                 Our speakers deliver premium sound quality, sleek design, and
                 long-lasting durability, ensuring an unmatched listening
                 experience.
               </p>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>Is it styled?</AccordionTrigger>
+          <AccordionItem value="item-2" className="pb-6 mb-8">
+            <AccordionTrigger>
+              <p className="text-2xl">
+                Are your speakers compatible with all devices?
+              </p>
+            </AccordionTrigger>
             <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
+              <p className="">
+                Yes! Our speakers connect seamlessly via Bluetooth, AUX, and
+                USB, making them compatible with smartphones, tablets, laptops,
+                and more.
+              </p>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Is it animated?</AccordionTrigger>
+          <AccordionItem value="item-3" className="pb-6 mb-8">
+            <AccordionTrigger>
+              <p className="text-2xl">How long does the battery last?</p>
+            </AccordionTrigger>
             <AccordionContent>
-              Yes. It's animated by default, but you can disable it if you
-              prefer.
+              <p className="">
+                Depending on the model, our speakers offer up to 12–24 hours of
+                continuous playtime on a full charge.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4" className="pb-6 mb-8">
+            <AccordionTrigger>
+              <p className="text-2xl">Are the speakers waterproof?</p>
+            </AccordionTrigger>
+            <AccordionContent>
+              <p className="">
+                Many of our models are water-resistant or fully waterproof,
+                making them perfect for outdoor adventures and poolside use.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-5" className="pb-6 mb-8">
+            <AccordionTrigger>
+              <p className="text-2xl">Do you offer a warranty?</p>
+            </AccordionTrigger>
+            <AccordionContent>
+              <p className="">
+                Yes, all our speakers come with a 1-year warranty, covering
+                manufacturing defects and ensuring peace of mind.
+              </p>
             </AccordionContent>
           </AccordionItem>
         </Accordion>

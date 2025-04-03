@@ -51,7 +51,7 @@ export default function HeroSection() {
       {/* Combined motion + parallax for text content */}
       <Parallax speed={0.3} direction="up" className="z-10">
         <motion.div
-          className="max-w-2xl mx-auto flex flex-col items-center text-center"
+          className="max-w-[1200px] mx-auto flex flex-col items-center text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}

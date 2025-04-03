@@ -19,7 +19,7 @@ export default function ProductShowSection() {
   ];
 
   return (
-    <section className="max-w-[1440px] mx-auto py-20 px-4">
+    <section className="max-w-[1200px] mx-auto py-20 px-4">
       {/* TEXT SECTION */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
         <div>
