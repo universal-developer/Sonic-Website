@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Slider } from "../ui/Slider";
+import TagButton from "../ui/TagButton";
 
 export default function ProductShowSection() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -28,24 +29,27 @@ export default function ProductShowSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="inline-flex items-center space-x-2 px-4 py-2 mb-6 rounded-full border border-gray-200 text-gray-700 hover:bg-gray-50 transition-colors duration-300"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="3" y="3" width="18" height="14" rx="2" ry="2" />
-              <path d="M7 21h10l-5-6z" />
-            </svg>
-
-            <span className="text-sm font-medium">In reality</span>
+            <TagButton
+              label="In reality"
+              withIcon
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="14" rx="2" ry="2" />
+                  <path d="M7 21h10l-5-6z" />
+                </svg>
+              }
+            />
           </motion.div>
           <motion.h2
             className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight"
