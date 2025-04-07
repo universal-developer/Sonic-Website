@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import NavBar from "@/components/layout/NavBar";
 import FAQSection from "@/components/sections/FAQSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
@@ -19,7 +20,8 @@ export default function Home() {
       <ProductShowSection />
       <FAQSection />
       <SoundInsights />
-      <SpeakerPromoSection />
+      <SpeakerPromoSection />\
+      <Footer />
     </>
   );
 }

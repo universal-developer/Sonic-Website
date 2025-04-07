@@ -41,9 +41,9 @@ export default function ProductShowSection() {
                   height="16"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <rect x="3" y="3" width="18" height="14" rx="2" ry="2" />
                   <path d="M7 21h10l-5-6z" />
