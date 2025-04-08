@@ -12,8 +12,7 @@ export default function Footer() {
           <div className="w-px h-5 bg-gray-600" />
           <p className="text-sm text-gray-300">The Perfect Sound, Anywhere</p>
         </div>
-
-        {/* Company */}
+        x{/* Company */}
         <div className="flex flex-col gap-2">
           <h3 className="font-semibold text-sm">Company</h3>
           <a
@@ -29,7 +28,6 @@ export default function Footer() {
             Contact us
           </a>
         </div>
-
         {/* Legal */}
         <div className="flex flex-col gap-2">
           <h3 className="font-semibold text-sm">Legal</h3>

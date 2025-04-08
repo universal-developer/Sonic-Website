@@ -1,12 +1,11 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Parallax from "@/components/animations/parallax";
 
 export default function HeroSection() {
-  // Add overflow-hidden to body when component mounts
   useEffect(() => {
     document.body.style.overflowX = "hidden";
     return () => {
@@ -14,14 +13,12 @@ export default function HeroSection() {
     };
   }, []);
 
-  // Reference for scroll-based animations
-  const sectionRef = React.useRef(null);
+  const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
 
-  // Transform values for various scroll effects
   const bgOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const bgScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
   const textY = useTransform(scrollYProgress, [0, 0.3], [0, -30]);
@@ -29,13 +26,13 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="snap-section flex flex-col items-center justify-start max-h-screen pt-32 px-4 overflow-hidden relative"
+      className="snap-section flex flex-col items-center justify-start pt-32 sm:pt-40 px-6 sm:px-8 overflow-hidden relative"
     >
-      {/* Background parallax elements */}
+      {/* Glows (only on desktop) */}
       <Parallax
         speed={0.15}
         direction="left"
-        className="absolute top-20 left-10 opacity-20 pointer-events-none"
+        className="hidden sm:block absolute top-20 left-10 opacity-20 pointer-events-none"
       >
         <div className="w-64 h-64 rounded-full bg-gradient-to-r from-teal-200 to-blue-200 blur-3xl" />
       </Parallax>
@@ -43,56 +40,58 @@ export default function HeroSection() {
       <Parallax
         speed={0.1}
         direction="right"
-        className="absolute bottom-40 right-10 opacity-20 pointer-events-none"
+        className="hidden sm:block absolute bottom-40 right-10 opacity-20 pointer-events-none"
       >
         <div className="w-56 h-56 rounded-full bg-gradient-to-r from-purple-200 to-pink-200 blur-3xl" />
       </Parallax>
 
-      {/* Combined motion + parallax for text content */}
-      <Parallax speed={0.3} direction="up" className="z-10">
+      {/* Text Content */}
+      <Parallax speed={0.3} direction="up" className="z-10 w-full">
         <motion.div
-          className="max-w-[1200px] mx-auto flex flex-col items-center text-center"
+          className="mx-auto flex flex-col items-center text-center max-w-[90%] sm:max-w-xl"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           style={{ y: textY }}
         >
-          {/* Heading with staggered animation */}
-          <motion.h1 className="title-primary text-center mb-6">
+          <motion.h1 className="text-[28px] sm:text-5xl font-extrabold leading-tight mb-4">
             <motion.span
               className="block"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              viewport={{ once: true }}
             >
               Engrossing Audio,
             </motion.span>
             <motion.span
               className="block"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              viewport={{ once: true }}
             >
               Streamlined
             </motion.span>
           </motion.h1>
 
-          {/* Description with fade-in animation */}
           <motion.p
-            className="text-primary text-center max-w-xl mb-8"
+            className="text-sm sm:text-lg text-gray-500 mb-6 sm:mb-8 leading-relaxed sm:leading-relaxed"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            viewport={{ once: true }}
           >
             Our most recent breakthrough in audio devices blends exceptional
             audio performance with unparalleled toughness and elegance.
           </motion.p>
 
-          {/* CTA Button with scale animation on hover */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -116,7 +115,7 @@ export default function HeroSection() {
                   />
                 </svg>
               }
-              className="bg-black text-white hover:bg-gray-800"
+              className="bg-black text-white hover:bg-gray-800 px-6 py-3 text-sm sm:text-base rounded-full"
             >
               Buy now
             </Button>
@@ -124,12 +123,17 @@ export default function HeroSection() {
         </motion.div>
       </Parallax>
 
-      {/* Product Image with parallax (moving in opposite direction) */}
-      <Parallax speed={0.2} direction="down" className="mt-16 w-full z-0">
+      {/* Product Image */}
+      <Parallax
+        speed={0.2}
+        direction="down"
+        className="mt-10 sm:mt-16 w-full z-0"
+      >
         <motion.div
           className="flex justify-center mx-auto relative"
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{
             duration: 0.8,
             delay: 0.5,
@@ -137,9 +141,9 @@ export default function HeroSection() {
           }}
         >
           <motion.div
-            className="relative w-full max-w-3xl"
+            className="relative w-4/5 max-w-[280px] sm:max-w-2xl"
             animate={{
-              y: [0, -10, 0], // Subtle floating effect
+              y: [0, -10, 0],
             }}
             transition={{
               duration: 4.5,
@@ -151,16 +155,17 @@ export default function HeroSection() {
             <Image
               src="/Product-image.png"
               alt="Sonic audio device"
-              width={1200}
-              height={1200}
+              width={800}
+              height={800}
               priority
               className="w-full h-auto object-contain"
+              sizes="(max-width: 768px) 80vw, 600px"
             />
           </motion.div>
 
-          {/* Parallax glow effect */}
+          {/* Glow behind image (only on desktop) */}
           <motion.div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 rounded-full bg-teal-400/20 blur-3xl -z-10"
+            className="hidden sm:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 rounded-full bg-teal-400/20 blur-3xl -z-10"
             style={{ opacity: bgOpacity, scale: bgScale }}
             animate={{
               opacity: [0.4, 0.6, 0.4],
