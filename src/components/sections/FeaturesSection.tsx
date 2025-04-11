@@ -10,7 +10,7 @@ export default function ProductFeatureSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1200px] mx-auto">
         {/* Image Container - First on Mobile */}
         <Image
-          src="/Product-image-2.png"
+          src="/Product-Image-2.png"
           alt="Portable speaker"
           width={800}
           height={800}
