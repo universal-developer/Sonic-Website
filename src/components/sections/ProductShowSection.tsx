@@ -51,8 +51,9 @@ export default function ProductShowSection() {
               }
             />
           </motion.div>
+
           <motion.h2
-            className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight"
+            className="title-tertiary"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -61,9 +62,10 @@ export default function ProductShowSection() {
             Timeless Elegance
           </motion.h2>
         </div>
+
         <div className="flex items-end">
           <motion.p
-            className="text-lg md:text-xl text-gray-600 leading-relaxed"
+            className="text-primary"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}

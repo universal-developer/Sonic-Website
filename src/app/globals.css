@@ -124,6 +124,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    @apply font-sans bg-background text-foreground antialiased;
   }
 }
 
@@ -153,118 +154,194 @@ body {
 /* Typography System - Hierarchy Based */
 
 /* Headings */
+/* Typography System - Responsive Apple-Inspired */
+
+/* Headings */
 .title-primary {
-  /* For main page headlines - "Engrossing Audio, Streamlined" */
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 60px;
+  font-size: 32px;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #1c1c1e;
+}
+@media (min-width: 640px) {
+  .title-primary {
+    font-size: 44px;
+  }
+}
+@media (min-width: 768px) {
+  .title-primary {
+    font-size: 60px;
+  }
 }
 
 .title-secondary {
-  /* For section headlines - "Our latest innovation", "Trusted by Thousands" */
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 44px;
+  font-size: 28px;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #1c1c1e;
+}
+@media (min-width: 640px) {
+  .title-secondary {
+    font-size: 36px;
+  }
+}
+@media (min-width: 768px) {
+  .title-secondary {
+    font-size: 52px;
+  }
 }
 
 .title-tertiary {
-  /* For feature headlines - "Experience crystal-clear audio with deep bass" */
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #1c1c1e;
+}
+@media (min-width: 640px) {
+  .title-tertiary {
+    font-size: 36px;
+  }
+}
+@media (min-width: 768px) {
+  .title-tertiary {
+    font-size: 44px;
+  }
 }
 
 .title-quaternary {
-  /* For subsection headlines - "Timeless Elegance", "Sound Insights" */
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.4;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #1c1c1e;
+}
+@media (min-width: 640px) {
+  .title-quaternary {
+    font-size: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .title-quaternary {
+    font-size: 36px;
+  }
 }
 
 .title-quinary {
-  /* For card titles, FAQ questions */
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #1c1c1e;
+}
+@media (min-width: 640px) {
+  .title-quinary {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .title-quinary {
+    font-size: 28px;
+  }
 }
 
-/* Body text */
+/* Body Text */
 .text-primary {
-  /* Main descriptive text - larger paragraphs */
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
-  color: #6e6e73;
+}
+@media (min-width: 640px) {
+  .text-primary {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .text-primary {
+    font-size: 24px;
+  }
 }
 
 .text-secondary {
-  /* Standard body text */
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #6e6e73;
-}
-
-.text-highlight {
-  /* For emphasized text, feature highlights */
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 24px;
-  line-height: 1.6;
-  font-weight: 500; /* Medium weight for emphasis */
-  color: #1c1c1e;
-}
-
-.text-caption {
-  /* For smaller supporting text, captions, tags */
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
-  color: #86868b;
+}
+@media (min-width: 640px) {
+  .text-secondary {
+    font-size: 16px;
+  }
 }
 
-/* Stats text - for the numbers in the stats section */
+.text-highlight {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+@media (min-width: 640px) {
+  .text-highlight {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .text-highlight {
+    font-size: 24px;
+  }
+}
+
+.text-caption {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+@media (min-width: 640px) {
+  .text-caption {
+    font-size: 14px;
+  }
+}
+
 .text-stat {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.2;
   font-weight: 700;
-  color: #1c1c1e;
+}
+@media (min-width: 640px) {
+  .text-stat {
+    font-size: 36px;
+  }
+}
+@media (min-width: 768px) {
+  .text-stat {
+    font-size: 44px;
+  }
 }
 
-/* Modifiers you can combine with the above */
-.text-center {
-  text-align: center;
+.faq-question {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
-.text-dark {
-  color: #1c1c1e;
+@media (min-width: 640px) {
+  .faq-question {
+    font-size: 22px;
+  }
 }
 
-.text-light {
-  color: #f5f5f7;
+@media (min-width: 768px) {
+  .faq-question {
+    font-size: 26px;
+  }
 }
 
-.text-accent {
-  color: #0071e3; /* Apple-style blue accent color, adjust to match your brand */
-}
 
 .font-medium {
   font-weight: 500;

@@ -33,10 +33,11 @@ export default function StatsSection() {
                 strokeWidth="2"
               />
             </svg>
-            <span className="text-sm font-medium">Why us?</span>
+            <span className="text-caption font-medium">Why us?</span>
           </motion.div>
+
           <motion.h2
-            className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight"
+            className="title-secondary"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -47,9 +48,10 @@ export default function StatsSection() {
             Engineered for Excellence
           </motion.h2>
         </div>
+
         <div className="flex items-end">
           <motion.p
-            className="text-lg md:text-xl text-gray-600 leading-relaxed"
+            className="text-primary"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -84,6 +86,7 @@ export default function StatsSection() {
           stat="60K+ Units Sold"
           description="Our speakers have reached over 60,000 satisfied customers."
         />
+
         <StatCard
           icon={
             <svg
@@ -105,6 +108,7 @@ export default function StatsSection() {
           stat="4.9/5 Average Rating"
           description="Thousands of reviews praise our unmatched sound quality"
         />
+
         <StatCard
           icon={
             <svg
